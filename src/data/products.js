@@ -24,14 +24,14 @@ export const cats = [
 ];
 
 export const sectors = [
-  { name: 'Technical Solutions', pic: '1496181133206-80ce9b88a853', note: 'Hardware, computers and integrated systems.' },
-  { name: 'Hospitality Equipment', pic: '1514933651103-005eec06c04b', note: 'Bar, kitchen and front-of-house supply.' },
-  { name: 'Cameras', pic: '1502920917128-1aa500764cbd', note: 'Professional imaging and capture gear.' },
-  { name: 'Office Furnishings', pic: '1524758631624-e2822e304c36', note: 'Workspaces, seating and fit-out.' },
-  { name: 'Computers', pic: '1517336714731-489689fd1ca8', note: 'Business-grade laptops and desktops.' },
-  { name: 'Bags & Corporate Gifts', pic: '1549465220-1a8b9238cd48', note: 'Custom branded merchandise and gifting.' },
-  { name: 'Marketing', pic: '1600880292203-757bb62b4baf', note: 'Campaign collateral and brand assets.' },
-  { name: 'Events', pic: '1556761175-5973dc0f32e7', note: 'Exhibition stands and event packages.' },
+  { name: 'Technical Solutions', pic: '1496181133206-80ce9b88a853', note: 'Hardware, computers and integrated systems.', href: '/products/camera-laptop' },
+  { name: 'Hospitality Equipment', pic: '1514933651103-005eec06c04b', note: 'Bar, kitchen and front-of-house supply.', href: '/products/hospitality' },
+  { name: 'Cameras', pic: '1502920917128-1aa500764cbd', note: 'Professional imaging and capture gear.', href: '/products/camera-laptop' },
+  { name: 'Office Furnishings', pic: '1524758631624-e2822e304c36', note: 'Workspaces, seating and fit-out.', href: '/products/furniture' },
+  { name: 'Computers', pic: '1517336714731-489689fd1ca8', note: 'Business-grade laptops and desktops.', href: '/products/camera-laptop' },
+  { name: 'Bags & Corporate Gifts', pic: '1549465220-1a8b9238cd48', note: 'Custom branded merchandise and gifting.', href: '/products/corporate-gifts' },
+  { name: 'Marketing', pic: '1600880292203-757bb62b4baf', note: 'Campaign collateral and brand assets.', href: '/products' },
+  { name: 'Events', pic: '1556761175-5973dc0f32e7', note: 'Exhibition stands and event packages.', href: '/products' },
 ];
 
 export const brands = ['Lenovo', 'Dell', 'ASUS', 'Canon', 'HP', 'Epson', 'Brother', 'IBM'];

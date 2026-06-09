@@ -132,13 +132,13 @@ export default function About() {
           </RevealWrapper>
           <RevealWrapper className="prod-grid no-scroll cols-3">
             {sectors.map(s => (
-              <div className="prod-card" key={s.name}>
+              <Link className="prod-card" to={s.href} key={s.name}>
                 <ZevImage className="pimg" id={s.pic} w={600} alt={s.name}>{s.name}</ZevImage>
                 <div className="pbody">
                   <h3>{s.name}</h3>
                   <p className="pdesc">{s.note}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </RevealWrapper>
         </div>

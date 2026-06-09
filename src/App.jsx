@@ -5,10 +5,12 @@ import Products from './pages/Products';
 import Contact from './pages/Contact';
 import SoundproofBooth from './pages/SoundproofBooth';
 import ProductDetail from './pages/ProductDetail';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
