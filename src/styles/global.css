@@ -59,7 +59,7 @@ img{max-width:100%;display:block}
 @media(max-width:480px){.topbar .tb-left{display:none}}
 
 /* ---------- Navbar ---------- */
-.nav{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100;transition:box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.nav{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:200;transition:box-shadow .3s var(--ease),border-color .3s var(--ease)}
 .nav.scrolled{box-shadow:0 6px 24px rgba(13,76,115,.10),0 2px 6px rgba(13,76,115,.05);border-color:transparent}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:24px}
 .logo{display:flex;align-items:center;gap:12px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:20px;color:var(--ink);letter-spacing:-.02em}
@@ -118,7 +118,7 @@ img{max-width:100%;display:block}
   .nav-links li.open .dropdown{max-height:520px;margin-bottom:8px;box-shadow:inset 2px 0 0 var(--sand)}
   .nav-cta{text-align:center;margin-top:10px}
   .burger{display:flex;z-index:130}
-  .nav-overlay{position:fixed;inset:0;background:rgba(7,42,64,.42);opacity:0;visibility:hidden;transition:.3s;z-index:110}
+  .nav-overlay{position:fixed;inset:0;background:rgba(7,42,64,.42);opacity:0;visibility:hidden;transition:.3s;z-index:180}
   .nav-overlay.active{opacity:1;visibility:visible}
 }
 
@@ -446,7 +446,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 @media (max-width:600px){.fab-stack{right:16px;bottom:16px}.fab{width:48px;height:48px}}
 
 /* ---------- Lightbox (gallery) ---------- */
-.lightbox{position:fixed;inset:0;z-index:200;background:rgba(7,42,64,.88);display:flex;align-items:center;justify-content:center;padding:30px;opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s;backdrop-filter:blur(3px)}
+.lightbox{position:fixed;inset:0;z-index:400;background:rgba(7,42,64,.88);display:flex;align-items:center;justify-content:center;padding:30px;opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s;backdrop-filter:blur(3px)}
 .lightbox.open{opacity:1;visibility:visible}
 .lightbox img{max-width:min(1100px,92vw);max-height:88vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:scale(.96);transition:transform .3s var(--ease)}
 .lightbox.open img{transform:scale(1)}
