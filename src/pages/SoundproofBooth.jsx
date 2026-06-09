@@ -33,7 +33,7 @@ export default function SoundproofBooth() {
         <div className="wrap">
           <RevealWrapper className="booth-row">
             <div className="booth-media">
-              <ZevImage className="bimg" id="1497366754035-f200968a6e72" w={900} alt="Soundproof office booth">Soundproof booth — hero</ZevImage>
+              <ZevImage className="bimg" id="1497366754035-f200968a6e72" w={900} alt="Soundproof office booth" priority>Soundproof booth — hero</ZevImage>
               <div className="bpill">SoundBox Office Booth</div>
             </div>
             <div className="booth-text">

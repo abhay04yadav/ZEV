@@ -87,8 +87,8 @@ export default function Home() {
 
           <RevealWrapper className="hero-art">
             <div className="deco"></div>
-            <ZevImage className="img-main" id="1524758631624-e2822e304c36" w={900} alt="Modern office workspace">Office &amp; tech collage</ZevImage>
-            <ZevImage className="img-sub" id="1496181133206-80ce9b88a853" w={700} alt="Laptop on a desk">Product shot</ZevImage>
+            <ZevImage className="img-main" id="1524758631624-e2822e304c36" w={900} alt="Modern office workspace" priority>Office &amp; tech collage</ZevImage>
+            <ZevImage className="img-sub" id="1496181133206-80ce9b88a853" w={700} alt="Laptop on a desk" priority>Product shot</ZevImage>
             <div className="badge">
               <span className="bnum">20<span style={{ color: 'var(--sand)' }}>+</span></span>
               <span className="btxt">Years serving the UAE market</span>

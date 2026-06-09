@@ -1,29 +1,35 @@
-import { useEffect, useRef } from 'react';
+import { useState } from 'react';
 
-export default function ZevImage({ id, w = 1000, alt = '', className = '', children, ...props }) {
-  const ref = useRef(null);
+export default function ZevImage({ id, w = 1000, alt = '', className = '', children, priority = false, ...props }) {
+  const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || el.dataset.done) return;
-    el.dataset.done = '1';
-    const img = document.createElement('img');
-    img.src = `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=75`;
-    img.alt = alt;
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    const onReady = () => el.classList.add('loaded');
-    img.addEventListener('load', onReady);
-    img.addEventListener('error', onReady);
-    if (img.complete) onReady();
-    const span = el.querySelector('span');
-    if (span) span.style.display = 'none';
-    el.appendChild(img);
-  }, [id, w, alt]);
+  const base = `https://images.unsplash.com/photo-${id}`;
+  const q = 'auto=format&fit=crop&fm=webp&q=75';
+  const half = Math.round(w * 0.5);
+  const dbl  = Math.min(w * 2, 2400);
+
+  const src    = `${base}?${q}&w=${w}`;
+  const srcSet = `${base}?${q}&w=${half} ${half}w, ${base}?${q}&w=${w} ${w}w, ${base}?${q}&w=${dbl} ${dbl}w`;
+  const sizes  = '(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw';
 
   return (
-    <div ref={ref} className={`ph${className ? ' ' + className : ''}`} data-img={id} data-w={w} data-alt={alt} {...props}>
-      {children && <span>{children}</span>}
+    <div
+      className={`ph${className ? ' ' + className : ''}${loaded ? ' loaded' : ''}`}
+      data-img={id}
+      {...props}
+    >
+      {children && !loaded && <span>{children}</span>}
+      <img
+        src={src}
+        srcSet={srcSet}
+        sizes={sizes}
+        alt={alt}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding={priority ? 'sync' : 'async'}
+        fetchPriority={priority ? 'high' : 'auto'}
+        onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
+      />
     </div>
   );
 }

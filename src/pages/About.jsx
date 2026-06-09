@@ -28,7 +28,7 @@ export default function About() {
         <div className="wrap">
           <RevealWrapper className="about-row">
             <div className="about-img">
-              <ZevImage className="aimg" id="1522071820081-009f0129c71c" w={800} alt="ZEV team collaborating">Team / business meeting</ZevImage>
+              <ZevImage className="aimg" id="1522071820081-009f0129c71c" w={800} alt="ZEV team collaborating" priority>Team / business meeting</ZevImage>
               <div className="tab">Est. 20+ Years</div>
             </div>
             <div className="about-text">
