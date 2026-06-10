@@ -446,101 +446,98 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 @media (max-width:600px){.fab-stack{right:16px;bottom:16px}.fab{width:48px;height:48px}}
 
 /* ---------- Lightbox (gallery) ---------- */
+/* Rendered via React portal directly on <body> — no stacking-context issues */
 
-/* Full-screen dark cinema overlay — professional, no page-blur distraction */
 .lb-backdrop{
-  position:fixed;inset:0;z-index:400;
-  background:rgba(6,14,24,.96);
+  position:fixed;inset:0;z-index:9000;
+  /* Blurred page visible behind overlay — matches request */
+  background:rgba(8,16,28,.72);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:18px;
+  gap:20px;padding:16px;box-sizing:border-box;
   animation:lbIn .2s var(--ease) forwards;
 }
 @keyframes lbIn{from{opacity:0}to{opacity:1}}
 
-/* Close button — always at top-right of the VIEWPORT, never on the image */
+/* Close — always top-right of the actual screen */
 .lb-close{
-  position:absolute;top:18px;right:20px;
+  position:absolute;top:16px;right:16px;
   width:40px;height:40px;border-radius:50%;
-  background:rgba(255,255,255,.1);
-  border:1.5px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.15);
+  border:1.5px solid rgba(255,255,255,.25);
   color:#fff;
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;z-index:5;
+  cursor:pointer;z-index:2;
   transition:background .18s var(--ease),transform .18s var(--ease);
 }
-.lb-close:hover{background:rgba(255,255,255,.22);transform:scale(1.1)}
+.lb-close:hover{background:rgba(255,255,255,.28);transform:scale(1.1)}
 .lb-close svg{width:18px;height:18px}
 
-/* Navigation row: prev-arrow · stage · next-arrow */
+/* Arrow + image + arrow row */
 .lb-frame{
-  display:flex;align-items:center;gap:20px;
-  width:100%;max-width:min(1040px,calc(100vw - 40px));
-  padding:0 20px;box-sizing:border-box;
+  display:flex;align-items:center;gap:18px;
+  width:100%;max-width:min(1040px,100%);
+  box-sizing:border-box;
 }
 
-/* Fixed-size stage — identical dimensions for every image */
+/* Stage sizes itself to the image — no fixed height, no letterbox bars */
 .lb-stage{
   flex:1;min-width:0;
-  height:min(600px,calc(100dvh - 190px));
   display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  gap:10px;
+  align-items:center;gap:10px;
 }
 
-/* Image always fits inside the stage — consistent size, no overflow */
+/* Image constrained by viewport, not by a container */
 .lb-img{
-  max-width:100%;
-  max-height:calc(100% - 30px); /* leave room for caption */
-  width:auto;height:auto;
-  object-fit:contain;
-  border-radius:6px;
-  box-shadow:0 20px 60px rgba(0,0,0,.6),0 4px 16px rgba(0,0,0,.4);
   display:block;
+  max-width:100%;
+  max-height:calc(100dvh - 180px);
+  width:auto;height:auto;
+  border-radius:10px;
+  box-shadow:0 24px 80px rgba(0,0,0,.6),0 4px 16px rgba(0,0,0,.35);
   animation:lbImgIn .22s var(--ease) forwards;
 }
-@keyframes lbImgIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+@keyframes lbImgIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
 
-/* Caption below the image */
 .lb-cap{
   font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;
-  color:rgba(255,255,255,.5);
-  text-align:center;margin:0;letter-spacing:.02em;
-  max-width:100%;
+  color:rgba(255,255,255,.55);text-align:center;margin:0;
 }
 
 /* Circular nav arrows */
 .lb-arrow{
   width:48px;height:48px;flex:none;border-radius:50%;
-  background:rgba(255,255,255,.09);
-  border:1.5px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(255,255,255,.22);
   color:#fff;
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;
   transition:background .18s var(--ease),transform .18s var(--ease);
 }
-.lb-arrow:hover{background:rgba(255,255,255,.22);transform:scale(1.08)}
+.lb-arrow:hover{background:rgba(255,255,255,.26);transform:scale(1.08)}
 .lb-arrow svg{width:22px;height:22px}
 
-/* Dot indicators */
+/* Dots */
 .lb-dots{display:flex;gap:8px;align-items:center}
 .lb-dot{
   width:7px;height:7px;border-radius:50%;
-  background:rgba(255,255,255,.3);border:none;cursor:pointer;padding:0;
+  background:rgba(255,255,255,.32);border:none;cursor:pointer;padding:0;
   transition:background .18s var(--ease),transform .18s var(--ease);
 }
 .lb-dot.active{background:#fff;transform:scale(1.45)}
 
 @media(max-width:640px){
-  .lb-close{top:12px;right:14px;width:36px;height:36px}
-  .lb-close svg{width:16px;height:16px}
-  .lb-frame{gap:10px;padding:0 10px;max-width:100%}
-  .lb-stage{height:min(440px,calc(100dvh - 160px))}
+  .lb-backdrop{gap:14px;padding:12px}
+  .lb-frame{gap:10px}
+  .lb-img{max-height:calc(100dvh - 160px);border-radius:8px}
   .lb-arrow{width:38px;height:38px}
   .lb-arrow svg{width:18px;height:18px}
+  .lb-close{top:12px;right:12px;width:36px;height:36px}
+  .lb-close svg{width:16px;height:16px}
 }
 @media(max-width:400px){
-  .lb-frame{gap:6px;padding:0 6px}
-  .lb-arrow{width:32px;height:32px;background:rgba(255,255,255,.12)}
+  .lb-frame{gap:6px}
+  .lb-arrow{width:32px;height:32px}
   .lb-arrow svg{width:16px;height:16px}
 }
 

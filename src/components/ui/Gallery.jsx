@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import ZevImage from './ZevImage';
 
 const ChevL = () => (
@@ -36,7 +37,6 @@ export default function Gallery({ images, alts = [] }) {
     return () => document.removeEventListener('keydown', onKey);
   }, [idx, close, prev, next]);
 
-  // Scroll lock — cleanup always runs to prevent body staying locked
   useEffect(() => {
     document.body.style.overflow = idx !== null ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
@@ -70,15 +70,15 @@ export default function Gallery({ images, alts = [] }) {
         ))}
       </div>
 
-      {isOpen && (
+      {/* Portal renders directly on <body>, escaping any parent transform/stacking context */}
+      {isOpen && createPortal(
         <div className="lb-backdrop" onClick={close} role="dialog" aria-modal="true" aria-label="Image viewer">
 
-          {/* Close — fixed to top-right of viewport, always reachable regardless of image size */}
+          {/* Close — top-right corner of the actual viewport */}
           <button className="lb-close" onClick={close} aria-label="Close">
             <CloseX />
           </button>
 
-          {/* prev arrow · stage · next arrow */}
           <div className="lb-frame" onClick={(e) => e.stopPropagation()}>
             {total > 1 && (
               <button className="lb-arrow lb-prev" onClick={prev} aria-label="Previous image">
@@ -86,7 +86,6 @@ export default function Gallery({ images, alts = [] }) {
               </button>
             )}
 
-            {/* Fixed-size stage — every image renders at the same dimensions */}
             <div className="lb-stage">
               <img src={src} alt={alt} className="lb-img" draggable={false} />
               {alt && <p className="lb-cap">{alt}</p>}
@@ -111,7 +110,8 @@ export default function Gallery({ images, alts = [] }) {
               ))}
             </div>
           )}
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
