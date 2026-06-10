@@ -9,7 +9,10 @@ export default function FloatingButtons() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToTop = () => {
+    document.body.style.overflow = ''; // release any lightbox scroll lock
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="fab-stack">

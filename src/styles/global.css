@@ -447,95 +447,101 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 
 /* ---------- Lightbox (gallery) ---------- */
 
-/* Backdrop — very subtle blur so page is still recognisable behind the card */
+/* Full-screen dark cinema overlay — professional, no page-blur distraction */
 .lb-backdrop{
   position:fixed;inset:0;z-index:400;
-  background:rgba(10,30,46,.55);
-  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  background:rgba(6,14,24,.96);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:18px;padding:20px;
-  animation:lbFadeIn .22s var(--ease) forwards;
+  gap:18px;
+  animation:lbIn .2s var(--ease) forwards;
 }
-@keyframes lbFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
 
-/* Frame: arrow – card – arrow in a row */
-.lb-frame{
-  display:flex;align-items:center;gap:16px;
-  max-width:min(920px,100%);width:100%;
-}
-
-/* The card itself */
-.lb-card{
-  position:relative;flex:1;min-width:0;
-  background:#fff;
-  border-radius:18px;overflow:hidden;
-  box-shadow:0 32px 80px rgba(0,0,0,.45),0 8px 24px rgba(0,0,0,.25);
-  animation:lbCardIn .26s var(--ease) forwards;
-}
-@keyframes lbCardIn{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
-
-/* Image fills the card */
-.lb-img{
-  display:block;width:100%;
-  max-height:calc(100dvh - 160px);
-  object-fit:contain;
-}
-
-/* Caption strip */
-.lb-cap{
-  padding:11px 16px;
-  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;
-  color:var(--muted);border-top:1px solid var(--line);
-  background:#fff;margin:0;
-}
-
-/* Close button — top-right corner of the card, always above the image */
+/* Close button — always at top-right of the VIEWPORT, never on the image */
 .lb-close{
-  position:absolute;top:12px;right:12px;z-index:5;
-  width:34px;height:34px;border-radius:50%;
-  background:rgba(255,255,255,.92);
-  border:1px solid rgba(0,0,0,.1);
-  color:var(--ink);
+  position:absolute;top:18px;right:20px;
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.1);
+  border:1.5px solid rgba(255,255,255,.2);
+  color:#fff;
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;
-  box-shadow:0 2px 8px rgba(0,0,0,.18);
+  cursor:pointer;z-index:5;
   transition:background .18s var(--ease),transform .18s var(--ease);
 }
-.lb-close:hover{background:#fff;transform:scale(1.1)}
-.lb-close svg{width:15px;height:15px}
+.lb-close:hover{background:rgba(255,255,255,.22);transform:scale(1.1)}
+.lb-close svg{width:18px;height:18px}
 
-/* Navigation arrows — outside the card, left and right */
+/* Navigation row: prev-arrow · stage · next-arrow */
+.lb-frame{
+  display:flex;align-items:center;gap:20px;
+  width:100%;max-width:min(1040px,calc(100vw - 40px));
+  padding:0 20px;box-sizing:border-box;
+}
+
+/* Fixed-size stage — identical dimensions for every image */
+.lb-stage{
+  flex:1;min-width:0;
+  height:min(600px,calc(100dvh - 190px));
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:10px;
+}
+
+/* Image always fits inside the stage — consistent size, no overflow */
+.lb-img{
+  max-width:100%;
+  max-height:calc(100% - 30px); /* leave room for caption */
+  width:auto;height:auto;
+  object-fit:contain;
+  border-radius:6px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6),0 4px 16px rgba(0,0,0,.4);
+  display:block;
+  animation:lbImgIn .22s var(--ease) forwards;
+}
+@keyframes lbImgIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+
+/* Caption below the image */
+.lb-cap{
+  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;
+  color:rgba(255,255,255,.5);
+  text-align:center;margin:0;letter-spacing:.02em;
+  max-width:100%;
+}
+
+/* Circular nav arrows */
 .lb-arrow{
-  width:46px;height:46px;flex:none;border-radius:50%;
-  background:rgba(255,255,255,.16);
-  border:1.5px solid rgba(255,255,255,.28);
+  width:48px;height:48px;flex:none;border-radius:50%;
+  background:rgba(255,255,255,.09);
+  border:1.5px solid rgba(255,255,255,.18);
   color:#fff;
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;
   transition:background .18s var(--ease),transform .18s var(--ease);
 }
-.lb-arrow:hover{background:rgba(255,255,255,.28);transform:scale(1.08)}
+.lb-arrow:hover{background:rgba(255,255,255,.22);transform:scale(1.08)}
 .lb-arrow svg{width:22px;height:22px}
 
-/* Dot strip at the bottom of the backdrop */
-.lb-dots{display:flex;gap:7px;align-items:center}
+/* Dot indicators */
+.lb-dots{display:flex;gap:8px;align-items:center}
 .lb-dot{
   width:7px;height:7px;border-radius:50%;
-  background:rgba(255,255,255,.35);border:none;cursor:pointer;
-  transition:background .18s var(--ease),transform .18s var(--ease);padding:0;
+  background:rgba(255,255,255,.3);border:none;cursor:pointer;padding:0;
+  transition:background .18s var(--ease),transform .18s var(--ease);
 }
-.lb-dot.active{background:#fff;transform:scale(1.4)}
+.lb-dot.active{background:#fff;transform:scale(1.45)}
 
-/* Mobile: arrows sit inside the frame but card takes full width */
-@media(max-width:600px){
-  .lb-backdrop{padding:12px;gap:12px}
-  .lb-frame{gap:8px}
+@media(max-width:640px){
+  .lb-close{top:12px;right:14px;width:36px;height:36px}
+  .lb-close svg{width:16px;height:16px}
+  .lb-frame{gap:10px;padding:0 10px;max-width:100%}
+  .lb-stage{height:min(440px,calc(100dvh - 160px))}
   .lb-arrow{width:38px;height:38px}
   .lb-arrow svg{width:18px;height:18px}
-  .lb-img{max-height:calc(100dvh - 140px)}
-  .lb-card{border-radius:14px}
-  .lb-close{width:30px;height:30px;top:8px;right:8px}
-  .lb-close svg{width:13px;height:13px}
+}
+@media(max-width:400px){
+  .lb-frame{gap:6px;padding:0 6px}
+  .lb-arrow{width:32px;height:32px;background:rgba(255,255,255,.12)}
+  .lb-arrow svg{width:16px;height:16px}
 }
 
 /* ---------- Product detail page ---------- */
