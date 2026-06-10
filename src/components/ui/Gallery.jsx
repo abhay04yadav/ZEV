@@ -74,11 +74,6 @@ export default function Gallery({ images, alts = [] }) {
       {isOpen && createPortal(
         <div className="lb-backdrop" onClick={close} role="dialog" aria-modal="true" aria-label="Image viewer">
 
-          {/* Close — top-right corner of the actual viewport */}
-          <button className="lb-close" onClick={close} aria-label="Close">
-            <CloseX />
-          </button>
-
           <div className="lb-frame" onClick={(e) => e.stopPropagation()}>
             {total > 1 && (
               <button className="lb-arrow lb-prev" onClick={prev} aria-label="Previous image">
@@ -87,6 +82,10 @@ export default function Gallery({ images, alts = [] }) {
             )}
 
             <div className="lb-stage">
+              {/* Close sits on the top-right corner of the image */}
+              <button className="lb-close" onClick={close} aria-label="Close">
+                <CloseX />
+              </button>
               <img src={src} alt={alt} className="lb-img" draggable={false} />
               {alt && <p className="lb-cap">{alt}</p>}
             </div>

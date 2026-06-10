@@ -459,19 +459,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 @keyframes lbIn{from{opacity:0}to{opacity:1}}
 
-/* Close — always top-right of the actual screen */
+/* Close — sits on the top-right corner of the image */
 .lb-close{
-  position:absolute;top:16px;right:16px;
-  width:40px;height:40px;border-radius:50%;
-  background:rgba(255,255,255,.15);
-  border:1.5px solid rgba(255,255,255,.25);
-  color:#fff;
+  position:absolute;top:-14px;right:-14px;
+  width:36px;height:36px;border-radius:50%;
+  background:#fff;
+  border:none;
+  color:var(--ink);
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;z-index:2;
-  transition:background .18s var(--ease),transform .18s var(--ease);
+  box-shadow:0 2px 12px rgba(0,0,0,.35);
+  transition:background .18s var(--ease),transform .18s var(--ease),color .18s var(--ease);
 }
-.lb-close:hover{background:rgba(255,255,255,.28);transform:scale(1.1)}
-.lb-close svg{width:18px;height:18px}
+.lb-close:hover{background:var(--teal);color:#fff;transform:scale(1.1)}
+.lb-close svg{width:15px;height:15px}
 
 /* Arrow + image + arrow row */
 .lb-frame{
@@ -483,6 +484,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 /* Stage sizes itself to the image — no fixed height, no letterbox bars */
 .lb-stage{
   flex:1;min-width:0;
+  position:relative; /* anchor for the close button */
   display:flex;flex-direction:column;
   align-items:center;gap:10px;
 }
@@ -532,8 +534,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .lb-img{max-height:calc(100dvh - 160px);border-radius:8px}
   .lb-arrow{width:38px;height:38px}
   .lb-arrow svg{width:18px;height:18px}
-  .lb-close{top:12px;right:12px;width:36px;height:36px}
-  .lb-close svg{width:16px;height:16px}
+  .lb-close{width:32px;height:32px;top:-12px;right:-12px}
+  .lb-close svg{width:13px;height:13px}
 }
 @media(max-width:400px){
   .lb-frame{gap:6px}
