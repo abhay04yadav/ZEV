@@ -105,6 +105,49 @@ export default function ProductDetail() {
         </div>
       </section>
 
+      {/* HOW TO USE — shown only when data.howToUse exists (tire-protection) */}
+      {data.howToUse && (
+        <section className="section" style={{ background: 'var(--bg)' }}>
+          <div className="wrap">
+            <RevealWrapper className="sec-head">
+              <span className="eyebrow">Usage Guide</span>
+              <h2>How To Use</h2>
+            </RevealWrapper>
+            <RevealWrapper>
+              <p className="htu-intro">{data.howToUse.intro}</p>
+            </RevealWrapper>
+            {data.howToUse.features.map((feat, i) =>
+              feat.img ? (
+                <RevealWrapper key={i} className={`subcat-row${i % 2 === 1 ? ' reverse' : ''}`}>
+                  <div className="subcat-img">
+                    <ZevImage id={feat.img} w={700} alt={feat.label} className="scimg" />
+                  </div>
+                  <div className="subcat-text">
+                    <h3>{feat.label}</h3>
+                    {feat.desc && <p>{feat.desc}</p>}
+                  </div>
+                </RevealWrapper>
+              ) : (
+                <RevealWrapper key={i} className="htu-feat-text-only">
+                  <h3>{feat.label}</h3>
+                  {feat.desc && <p>{feat.desc}</p>}
+                </RevealWrapper>
+              )
+            )}
+            {data.howToUse.bullets && data.howToUse.bullets.length > 0 && (
+              <RevealWrapper className="htu-bullets">
+                {data.howToUse.bullets.map((b, i) => (
+                  <div className="htu-bullet" key={i}>
+                    {b.img && <img src={b.img} alt={b.text} loading="lazy" />}
+                    <p>{b.text}</p>
+                  </div>
+                ))}
+              </RevealWrapper>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* CATALOGUE DOWNLOAD — shown when data.catalog exists */}
       {data.catalog && (
         <section className="section" style={{ background: 'var(--bg)' }}>

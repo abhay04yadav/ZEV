@@ -579,6 +579,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .faq-item h4{font-size:1rem;font-weight:600;color:var(--ink);margin:0 0 8px}
 .faq-item p{font-size:.935rem;color:var(--muted);margin:0;line-height:1.65}
 
+/* ---------- How To Use (tire-protection) ---------- */
+.htu-intro{color:var(--muted);line-height:1.72;font-size:1rem;max-width:740px;margin:0 auto 48px;text-align:center}
+.htu-feat-text-only{padding:32px 0;border-bottom:1px solid var(--line)}
+.htu-feat-text-only:last-child{border-bottom:none}
+.htu-feat-text-only h3{font-size:1.35rem;font-weight:700;color:var(--ink);margin:0 0 12px}
+.htu-feat-text-only p{color:var(--muted);line-height:1.72;font-size:.96rem;margin:0}
+.htu-bullets{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.htu-bullet img{width:100%;border-radius:12px;object-fit:cover;aspect-ratio:4/3;display:block}
+.htu-bullet p{margin:12px 0 0;color:var(--muted);font-size:.91rem;line-height:1.6}
+@media(max-width:860px){.htu-bullets{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.htu-bullets{grid-template-columns:1fr}}
+
 /* ---------- Paddle Board page ---------- */
 .pb-hero{position:relative;overflow:hidden}
 .pb-hero-bg{min-height:560px;background-size:cover;background-position:center;display:flex;align-items:center;position:relative}
