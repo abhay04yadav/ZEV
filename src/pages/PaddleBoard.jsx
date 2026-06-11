@@ -170,6 +170,43 @@ export default function PaddleBoard() {
         </div>
       </section>
 
+      {/* PRODUCT SPEC — annotated board diagram */}
+      <section className="section" style={{ background: '#fff' }}>
+        <div className="wrap">
+          <RevealWrapper className="pb-spec">
+            <div className="pb-spec-text">
+              <h2>Your Water Adventure Starts Here — Stand-Up and Seating Paddle Boards (SUP)</h2>
+              <p>At ZEV, we specialize in Fishing paddle boards, designed for every level of water enthusiast.</p>
+              <p>Premium inflatable and rigid paddle boards for UAE waters. Explore our collection of stand-up paddle boards perfect for Dubai beaches, Abu Dhabi coastline, and calm UAE waters. Inflatable SUPs, touring boards, and racing paddle boards available.</p>
+              <ul className="pb-check-list">
+                <li>Inflatable paddle boards (easy storage)</li>
+                <li>Rigid SUP boards (high performance)</li>
+                <li>All-around paddle boards for beginners</li>
+                <li>Touring and racing SUP boards</li>
+                <li>Complete paddle board packages with accessories</li>
+              </ul>
+              <div className="pb-stats">
+                <div className="pb-stat">
+                  <span className="pb-stat-num">150<span className="pb-stat-plus">+</span></span>
+                  <span className="pb-stat-lbl">Top Rated</span>
+                </div>
+                <div className="pb-stat">
+                  <span className="pb-stat-num">15</span>
+                  <span className="pb-stat-lbl">Trusted Reviews</span>
+                </div>
+              </div>
+            </div>
+            <div className="pb-spec-img">
+              <ZevImage
+                id={CDN(900, 600, 'screenshot_2025-10-13_124732-removebg-preview-purdwnsdmeSpigIj.png')}
+                alt="ZEV Fishing Paddle Board 353 x 88 x 15 CM — annotated diagram"
+                className="psimg"
+              />
+            </div>
+          </RevealWrapper>
+        </div>
+      </section>
+
       {/* GALLERY */}
       <section className="section" id="gallery" style={{ background: '#fff' }}>
         <div className="wrap">

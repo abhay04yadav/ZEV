@@ -6,6 +6,8 @@ import Contact from './pages/Contact';
 import SoundproofBooth from './pages/SoundproofBooth';
 import ProductDetail from './pages/ProductDetail';
 import PaddleBoard from './pages/PaddleBoard';
+import ScreenExtender from './pages/ScreenExtender';
+import ScreenExtenderProduct from './pages/ScreenExtenderProduct';
 import ScrollToTop from './components/ui/ScrollToTop';
 
 export default function App() {
@@ -18,8 +20,10 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/soundproof-booth" element={<SoundproofBooth />} />
-        {/* Dedicated paddle-board page — must be before the generic :slug route */}
+        {/* Dedicated pages — must be before the generic :slug route */}
         <Route path="/products/paddle-board" element={<PaddleBoard />} />
+        <Route path="/products/screen-extender" element={<ScreenExtender />} />
+        <Route path="/products/screen-extender/:model" element={<ScreenExtenderProduct />} />
         <Route path="/products/:slug" element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
