@@ -543,6 +543,22 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .lb-arrow svg{width:16px;height:16px}
 }
 
+/* ---------- Sub-categories (camera-laptop style alternating rows) ---------- */
+.subcat-row{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:40px 0;border-bottom:1px solid var(--line)}
+.subcat-row:last-child{border-bottom:none}
+.subcat-row.reverse{direction:rtl}
+.subcat-row.reverse>*{direction:ltr}
+.subcat-img .scimg{height:300px;border-radius:16px;box-shadow:var(--shadow-lg)}
+.subcat-text h3{font-size:1.45rem;font-weight:700;color:var(--ink);margin:0 0 14px}
+.subcat-text p{color:var(--muted);line-height:1.72;margin:0 0 20px;font-size:.96rem}
+.brand-tags{display:flex;flex-wrap:wrap;gap:8px}
+.brand-tag{display:inline-flex;align-items:center;padding:5px 14px;border-radius:20px;background:var(--sand-soft);color:var(--teal);font-size:.82rem;font-weight:600;letter-spacing:.03em}
+@media(max-width:860px){
+  .subcat-row{grid-template-columns:1fr;gap:24px;padding:32px 0}
+  .subcat-row.reverse{direction:ltr}
+  .subcat-img .scimg{height:240px}
+}
+
 /* ---------- FAQ list ---------- */
 .faq-list{display:flex;flex-direction:column;gap:0;max-width:760px;margin:0 auto}
 .faq-item{padding:22px 0;border-bottom:1px solid var(--line)}

@@ -124,8 +124,36 @@ export default function ProductDetail() {
         </div>
       </section>
 
+      {/* SUB-CATEGORIES — alternating image/text rows (e.g. camera-laptop page) */}
+      {data.subcats && data.subcats.length > 0 && (
+        <section className="section" style={{ background: '#fff' }}>
+          <div className="wrap">
+            <RevealWrapper className="sec-head">
+              <span className="eyebrow">What We Supply</span>
+              <h2>Our Tech Services</h2>
+            </RevealWrapper>
+            {data.subcats.map((sub, i) => (
+              <RevealWrapper key={i} className={`subcat-row${i % 2 === 1 ? ' reverse' : ''}`}>
+                <div className="subcat-img">
+                  <ZevImage id={sub.img} w={700} alt={sub.name} className="scimg" />
+                </div>
+                <div className="subcat-text">
+                  <h3>{sub.name}</h3>
+                  <p>{sub.desc}</p>
+                  {sub.brands && sub.brands.length > 0 && (
+                    <div className="brand-tags">
+                      {sub.brands.map(b => <span key={b} className="brand-tag">{b}</span>)}
+                    </div>
+                  )}
+                </div>
+              </RevealWrapper>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* GALLERY */}
-      <section className="section" style={{ background: '#fff' }}>
+      <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="wrap">
           <RevealWrapper className="sec-head">
             <span className="eyebrow">Gallery</span>
