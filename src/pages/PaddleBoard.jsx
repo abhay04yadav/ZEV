@@ -9,7 +9,8 @@ import Gallery from '../components/ui/Gallery';
 import FooterCTA from '../components/ui/FooterCTA';
 import PageBanner from '../components/ui/PageBanner';
 
-const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,fit=crop/mp83Oby8KKTL0rqW/';
+const CDN = (w, h, file) =>
+  `https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=${w},h=${h},fit=crop/mp83Oby8KKTL0rqW/${file}`;
 
 const WaIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.42 9.42 0 0 1 14.64-11.6 9.36 9.36 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.42 9.42zM20.52 3.45A11.36 11.36 0 0 0 12.05.94C5.8.94.71 6.03.71 12.28c0 2 .52 3.95 1.52 5.67L.6 23.94l6.13-1.61a11.34 11.34 0 0 0 5.32 1.35h.01c6.25 0 11.34-5.09 11.34-11.34 0-3.03-1.18-5.88-3.32-8.02z"/></svg>
@@ -24,14 +25,14 @@ const StarRow = () => (
 );
 
 const galleryImages = [
-  `${BASE}w=900,h=600/zev-fishing-board-1-Kg6DXL4EUW7QfQXf.jpg`,
-  `${BASE}w=900,h=600/zev-fishing-board-l07IYGVwABjWlsK2.jpg`,
-  `${BASE}w=900,h=600/whatsapp-image-2025-10-13-at-12.11.15-zQN4UTAXUqfx1Q5I.jpeg`,
-  `${BASE}w=900,h=600/whatsapp-image-2025-10-13-at-12.07.10-v1ZGLy3Gr3Sz3p7S.jpeg`,
-  `${BASE}w=900,h=600/whatsapp-image-2025-10-13-at-11.46.14-o2DNwBIXH4XiJeLh.jpeg`,
-  `${BASE}w=900,h=600/whatsapp_image_2025-10-13_at_12.06.25-removebg-preview-XDrt0p0lPb0mTM4k.png`,
-  `${BASE}w=900,h=600/screenshot_2025-10-13_124732-removebg-preview-purdwnsdmeSpigIj.png`,
-  `${BASE}w=1440,h=640/merged_document-tn3WL5H95rAhwsdz.jpg`,
+  CDN(900, 600, 'zev-fishing-board-1-Kg6DXL4EUW7QfQXf.jpg'),
+  CDN(900, 600, 'zev-fishing-board-l07IYGVwABjWlsK2.jpg'),
+  CDN(900, 600, 'whatsapp-image-2025-10-13-at-12.11.15-zQN4UTAXUqfx1Q5I.jpeg'),
+  CDN(900, 600, 'whatsapp-image-2025-10-13-at-12.07.10-v1ZGLy3Gr3Sz3p7S.jpeg'),
+  CDN(900, 600, 'whatsapp-image-2025-10-13-at-11.46.14-o2DNwBIXH4XiJeLh.jpeg'),
+  CDN(900, 600, 'whatsapp_image_2025-10-13_at_12.06.25-removebg-preview-XDrt0p0lPb0mTM4k.png'),
+  CDN(900, 600, 'screenshot_2025-10-13_124732-removebg-preview-purdwnsdmeSpigIj.png'),
+  CDN(1440, 640, 'merged_document-tn3WL5H95rAhwsdz.jpg'),
 ];
 
 const galleryAlts = [
@@ -98,7 +99,7 @@ export default function PaddleBoard() {
             <div className="pb-type-card">
               <div className="pb-type-img">
                 <ZevImage
-                  id={`${BASE}w=600,h=400/zev-fishing-board-1-Kg6DXL4EUW7QfQXf.jpg`}
+                  id={CDN(600, 400, 'zev-fishing-board-1-Kg6DXL4EUW7QfQXf.jpg')}
                   alt="Paddle Boards" className="ptimg"
                 />
               </div>
@@ -108,7 +109,7 @@ export default function PaddleBoard() {
             <div className="pb-type-card">
               <div className="pb-type-img">
                 <ZevImage
-                  id={`${BASE}w=600,h=400/whatsapp-image-2025-10-13-at-12.11.15-zQN4UTAXUqfx1Q5I.jpeg`}
+                  id={CDN(600, 400, 'whatsapp-image-2025-10-13-at-12.11.15-zQN4UTAXUqfx1Q5I.jpeg')}
                   alt="Kayaks" className="ptimg"
                 />
               </div>
@@ -118,7 +119,7 @@ export default function PaddleBoard() {
             <div className="pb-type-card">
               <div className="pb-type-img">
                 <ZevImage
-                  id={`${BASE}w=600,h=400/zev-fishing-board-l07IYGVwABjWlsK2.jpg`}
+                  id={CDN(600, 400, 'zev-fishing-board-l07IYGVwABjWlsK2.jpg')}
                   alt="Fishing Paddle Boards" className="ptimg"
                 />
               </div>
@@ -135,11 +136,11 @@ export default function PaddleBoard() {
           <RevealWrapper className="pb-feat">
             <div className="pb-feat-img">
               <ZevImage
-                id={`${BASE}w=1440,h=640/merged_document-tn3WL5H95rAhwsdz.jpg`}
+                id={CDN(1440, 640, 'merged_document-tn3WL5H95rAhwsdz.jpg')}
                 alt="ZEV Paddle Board range" className="pfimg"
               />
               <ZevImage
-                id={`${BASE}w=600,h=500/whatsapp_image_2025-10-13_at_12.06.25-removebg-preview-XDrt0p0lPb0mTM4k.png`}
+                id={CDN(600, 500, 'whatsapp_image_2025-10-13_at_12.06.25-removebg-preview-XDrt0p0lPb0mTM4k.png')}
                 alt="Paddle board product" className="pfimg-sub"
               />
             </div>
