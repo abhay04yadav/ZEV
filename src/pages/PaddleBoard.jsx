@@ -139,10 +139,6 @@ export default function PaddleBoard() {
                 id={CDN(1440, 640, 'merged_document-tn3WL5H95rAhwsdz.jpg')}
                 alt="ZEV Paddle Board range" className="pfimg"
               />
-              <ZevImage
-                id={CDN(600, 500, 'whatsapp_image_2025-10-13_at_12.06.25-removebg-preview-XDrt0p0lPb0mTM4k.png')}
-                alt="Paddle board product" className="pfimg-sub"
-              />
             </div>
             <div className="pb-feat-text">
               <span className="eyebrow">Stand-Up &amp; Seating SUP</span>
