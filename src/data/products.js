@@ -299,6 +299,7 @@ export const productPages = {
     cat: 'Automotive',
     title: 'ZEV Tire Protection',
     badge: 'Self-repairing technology',
+    picContain: true,
     pic: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop,q=95/mp83Oby8KKTL0rqW/screenshot_2024-03-21_132625-removebg-preview-A85rBNQ555SMKO0v.png',
     desc: [
       'Explore our new ZEV Tire Protection which is tailored to suit all cars. At ZEV, we offer professional solutions — new technology core self-repairing without feeling a thing. Drive with peace of mind with ZEV Tire Protection.',
@@ -363,15 +364,15 @@ export const productPages = {
     },
     gallery: [
       'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=435,fit=crop/mp83Oby8KKTL0rqW/picture1-AVLJwJzaR9iqGJlo.jpg',
-      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=600,fit=crop/mp83Oby8KKTL0rqW/screenshot-2024-06-10-174922-m5KvVv28pksQLxxx.jpg',
-      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=580,fit=crop/mp83Oby8KKTL0rqW/screenshot-2024-06-27-132026-mv0jEjNEeWH3QZK7.jpg',
-      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=686,fit=crop/mp83Oby8KKTL0rqW/screenshot-2024-06-27-131801-mv0jEjG0v1hD5Dxa.jpg',
+      '1568605117036-5fe5e7bab0b7',
+      '1503376780353-7e6692767b70',
+      '1449965408869-eaa3f722e40d',
     ],
     galleryAlts: [
-      'Tire protection product',
-      'Silent sound wave principle',
-      'Nano material enlarged view',
-      'Composite nano vinyl acetate copolymer gasket',
+      'Tire protection installation',
+      'Car on the road',
+      'Vehicle tire detail',
+      'Behind the wheel',
     ],
     related: [
       { id: 'hospitality', cat: 'Hospitality', name: 'Hospitality Equipment', pic: '1514933651103-005eec06c04b' },
