@@ -386,10 +386,10 @@ export const productPages = {
     cat: 'Hospitality',
     title: 'Hospitality Equipment for Hotels, Restaurants & Coffee Shops',
     badge: 'Hotel & restaurant grade',
-    pic: '1514933651103-005eec06c04b',
+    pic: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/side-view-coffee-machine-YBgl5oK100TQWWyG.jpg',
     desc: [
-      'Discover premium hospitality equipment tailored to the unique needs of hotels, restaurants, and coffee shops at ZEV. Our high-quality solutions are designed to elevate your establishment\'s operations.',
-      'From professional beverage equipment to front-of-house furnishings — sourced, delivered and installed across the UAE to meet your specific requirements.',
+      'Discover premium hospitality equipment tailored to the unique needs of hotels, restaurants, and coffee shops at ZEV. Our high-quality solutions are designed to elevate your establishment\'s operations and meet your specific requirements.',
+      'Elevate your hospitality experience with our top-notch equipment — sourced, delivered and installed across the UAE.',
     ],
     feats: [
       'Professional bar & beverage equipment',
@@ -403,8 +403,13 @@ export const productPages = {
       { icon: 'clock', title: 'Commercial Grade', desc: 'Sourced for daily commercial use, not domestic.' },
       { icon: 'sliders', title: 'One Supplier', desc: 'Bar, kitchen and front-of-house — all in one order.' },
     ],
-    gallery: ['1514933651103-005eec06c04b', '1559339352-11d035aa65de', '1551218808-94e220e084d2', '1470337458703-46ad1756a187'],
-    galleryAlts: ['Bar interior', 'Restaurant terrace', 'Kitchen prep', 'Beverage service'],
+    gallery: [
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/side-view-coffee-machine-YBgl5oK100TQWWyG.jpg',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/nafinia-putra-kwdp-0pok-i-unsplash-ALpBDXrD9que79a0.jpg',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/front-view-professional-kitchen-mjEP0LV8kWfVl16O.jpg',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/bar-concept-Y4LO3E0oP7Fo4wBY.jpg',
+    ],
+    galleryAlts: ['Side view coffee machine', 'Restaurant dining setting', 'Professional kitchen', 'Bar concept'],
     related: [
       { id: 'safety', cat: 'Protection', name: 'Safety', pic: '1504307651254-35680f356dfd' },
       { id: 'coffee-maker', cat: 'Lifestyle', name: 'Portable Coffee Maker', pic: '1442512595331-e89e73853f31' },
@@ -418,10 +423,10 @@ export const productPages = {
     cat: 'Protection',
     title: 'Safety Products & Personal Protective Equipment',
     badge: 'Standards compliant',
-    pic: '1504307651254-35680f356dfd',
+    pic: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/factory-workers-with-face-masks-protected-against-corona-virus-doing-quality-control-production-factory-A3QPLRDyV2fjDExY.jpg',
     desc: [
       'Explore a comprehensive range of safety products at ZEV. Our offerings ensure top-notch protection and compliance across various industries.',
-      'Trust ZEV for reliable safety solutions designed to meet your specific needs and enhance workplace safety — serving construction, industrial, government and event sectors.',
+      'Trust ZEV for reliable safety solutions designed to meet your specific needs and enhance workplace safety.',
     ],
     feats: [
       'Face masks, respirators & eye protection',
@@ -435,8 +440,15 @@ export const productPages = {
       { icon: 'sliders', title: 'Full Range', desc: 'Head-to-toe protection for any site or environment.' },
       { icon: 'clock', title: 'Dependable', desc: 'Consistent supply your teams and sites can rely on.' },
     ],
-    gallery: ['1504307651254-35680f356dfd', '1504328345606-18bbc8c9d7d1', '1587293852726-70cdb56c2866', '1530124566582-a618bc2615dc'],
-    galleryAlts: ['Factory safety crew', 'Industrial protective gloves', 'Safety first signage', 'High-vis safety vest'],
+    gallery: [
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/factory-workers-with-face-masks-protected-against-corona-virus-doing-quality-control-production-factory-A3QPLRDyV2fjDExY.jpg',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/unrecognizable-bearded-firefighter-wearing-leather-protective-gloves-Yg2aZNJE2WHB15Nb.jpg',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/side-view-specialist-holding-safety-first-sign-Aq2654pRvPcP6qGE.jpg',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/builder-uniform-wooden-background-flat-lay-A3QPLRDykVFly9xJ.jpg',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/29128075_2201.q713.031.f.m012.c5.personal-protective-equipment-ppe-flat-set-A1a1GG62BaF332lM.jpg',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/2209.i211.014.f.m012.c9.fp-vest-realistic-set-AzG8J2w14DCWljzz.jpg',
+    ],
+    galleryAlts: ['Factory workers with face masks', 'Firefighter protective gloves', 'Safety first sign', 'Builder PPE flat lay', 'Personal protective equipment set', 'High-visibility vest set'],
     related: [
       { id: 'coffee-maker', cat: 'Lifestyle', name: 'Portable Coffee Maker', pic: '1442512595331-e89e73853f31' },
       { id: 'camera-laptop', cat: 'Technology', name: 'Camera & Laptop', pic: '1496181133206-80ce9b88a853' },
@@ -448,27 +460,45 @@ export const productPages = {
 
   'coffee-maker': {
     cat: 'Lifestyle',
-    title: 'Portable Coffee Maker with Battery — NS Capsules & Ground Coffee',
+    title: 'Portable Coffee Maker with Battery, Coffee Powder and NS Capsules — Self-Heating Espresso Machine with Carrying Case for Travel Campers',
     badge: 'Office & travel ready',
-    pic: '1442512595331-e89e73853f31',
+    pic: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/screenshot-2025-01-03-134347-mv029NXX9NhaaMao.png',
     desc: [
       'Introducing the Portable Coffee Maker with Battery — supports Coffee Powder and NS Capsules for a self-heating espresso experience. Comes with an EVA carrying case, perfect for travel and campers.',
-      'Fast-heating ceramic technology brews espresso in just 3–4 minutes at 80℃ with 20-bar pressure for rich crema and full aroma — wherever you are.',
+      'Fast-heating ceramic technology brews espresso in just 3–4 minutes at 80℃/176℉ with run-dry protection and heat-insulated design — wherever you are.',
     ],
     feats: [
-      'Fast-heating ceramic tech — brews espresso in 3–4 minutes at 80℃',
-      '20-bar pressure for rich crema and aroma',
-      'Compatible with NS capsules and ground coffee',
-      'Built-in 12,500mAh rechargeable battery — 7–9 cups per charge',
-      'Smart LED display for battery & temperature — run-dry protection',
+      'Fast-heating & automatic extraction: ceramic heating technology brews espresso (80℃/176℉) in 3~4 minutes',
+      'Portable EVA material bag — convenient for camping, mountaineering and self-driving travel',
+      'Built-in 12,500mAh battery — brews 7~9 cups (50ml) or 7~8 cups (80ml) per charge',
+      'Easy to use: add hot water & double press, or add cold water & hold 2 seconds to extract directly',
+      'Run-dry protection when no water detected, plus heat-insulated design',
     ],
     values: [
       { icon: 'shield', title: '20 Bar Pressure', desc: 'Rich crema and full aroma — café-quality espresso anywhere.' },
       { icon: 'sliders', title: 'Dual Compatible', desc: 'Works with both NS capsules and ground coffee powder.' },
       { icon: 'clock', title: 'All-Day Battery', desc: '12,500mAh built-in battery charges in 3–3.5 hours, brews 7–9 cups per charge.' },
     ],
-    gallery: ['1442512595331-e89e73853f31', '1495474472287-4d71bcdd2085', '1509042239860-f550ce710b93', '1517668808822-9ebb02f2a0e6'],
-    galleryAlts: ['Portable coffee maker', 'Fresh espresso', 'Pouring coffee', 'Coffee capsules'],
+    subcatsEyebrow: "What's Included",
+    subcatsTitle: 'Accessories & Specifications',
+    subcats: [
+      {
+        img: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/screenshot-2025-01-03-130728-AR0MnwnbKntpeEQy.png',
+        name: 'Accessory',
+        desc: 'Complete accessory kit included with every unit — EVA carrying case and all essentials for travel and outdoor use.',
+      },
+      {
+        img: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/screenshot-2025-01-03-140759-YD0Baxo8kkUW0wjq.png',
+        name: 'Specifications',
+        desc: 'Full technical specifications for the portable espresso machine.',
+      },
+    ],
+    gallery: [
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/screenshot-2025-01-03-134347-mv029NXX9NhaaMao.png',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/screenshot-2025-01-03-130728-AR0MnwnbKntpeEQy.png',
+      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/screenshot-2025-01-03-140759-YD0Baxo8kkUW0wjq.png',
+    ],
+    galleryAlts: ['Portable coffee maker product', 'Accessories included', 'Technical specifications'],
     related: [
       { id: 'camera-laptop', cat: 'Technology', name: 'Camera & Laptop', pic: '1496181133206-80ce9b88a853' },
       { id: 'furniture', cat: 'Office', name: 'Furniture', pic: '1524758631624-e2822e304c36' },
