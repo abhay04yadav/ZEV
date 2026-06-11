@@ -299,8 +299,7 @@ export const productPages = {
     cat: 'Automotive',
     title: 'ZEV Tire Protection',
     badge: 'Self-repairing technology',
-    picContain: true,
-    pic: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop,q=95/mp83Oby8KKTL0rqW/screenshot_2024-03-21_132625-removebg-preview-A85rBNQ555SMKO0v.png',
+    pic: '1580273916550-e323be2ae537',
     desc: [
       'Explore our new ZEV Tire Protection which is tailored to suit all cars. At ZEV, we offer professional solutions — new technology core self-repairing without feeling a thing. Drive with peace of mind with ZEV Tire Protection.',
       'Our novel composite nano-vinyl acetate copolymer sealing pad provides buffering and support, avoiding instantaneous explosive air leakage. Polymer nano-memory glue automatically repairs and fills tire leaks up to 3mm diameter.',
@@ -359,6 +358,7 @@ export const productPages = {
         },
         {
           text: 'It can instantly and automatically repair punctured and damaged tyre tread',
+          img: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=334,fit=crop/mp83Oby8KKTL0rqW/picture1-AVLJwJzaR9iqGJlo.jpg',
         },
       ],
     },

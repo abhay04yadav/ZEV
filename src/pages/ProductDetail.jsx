@@ -68,7 +68,7 @@ export default function ProductDetail() {
           <RevealWrapper className="pd-hero">
             <div className="pd-media">
               <ZevImage
-                className={`pimgL${data.picContain ? ' pimgL-contain' : ''}`}
+                className="pimgL"
                 id={data.pic}
                 w={800}
                 alt={slugToName[slug]}
@@ -120,7 +120,7 @@ export default function ProductDetail() {
               feat.img ? (
                 <RevealWrapper key={i} className={`subcat-row${i % 2 === 1 ? ' reverse' : ''}`}>
                   <div className="subcat-img">
-                    <ZevImage id={feat.img} w={700} alt={feat.label} className="scimg scimg-contain" />
+                    <ZevImage id={feat.img} w={700} alt={feat.label} className="scimg htu-scimg" />
                   </div>
                   <div className="subcat-text">
                     <h3>{feat.label}</h3>

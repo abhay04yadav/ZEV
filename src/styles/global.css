@@ -583,6 +583,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .faq-item p{font-size:.935rem;color:var(--muted);margin:0;line-height:1.65}
 
 /* ---------- How To Use (tire-protection) ---------- */
+.htu-scimg img{object-position:center 80%}
 .htu-intro{color:var(--muted);line-height:1.72;font-size:1rem;max-width:740px;margin:0 auto 48px;text-align:center}
 .htu-feat-text-only{padding:32px 0;border-bottom:1px solid var(--line)}
 .htu-feat-text-only:last-child{border-bottom:none}
