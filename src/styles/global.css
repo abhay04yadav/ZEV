@@ -595,6 +595,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 @media(max-width:860px){.htu-bullets{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.htu-bullets{grid-template-columns:1fr}}
 
+/* ---------- Outdoor furniture category circles ---------- */
+.outdoor-cats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:32px 20px}
+.outdoor-cat-item{display:flex;flex-direction:column;align-items:center;gap:12px;cursor:default}
+.ph.outdoor-cat-circle{width:140px;height:140px;border-radius:50%;box-shadow:var(--shadow-md);flex:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.outdoor-cat-item:hover .outdoor-cat-circle{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.outdoor-cat-name{font-size:.875rem;font-weight:600;color:var(--ink);text-align:center;line-height:1.35}
+@media(max-width:860px){.outdoor-cats-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:560px){.outdoor-cats-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:380px){.outdoor-cats-grid{grid-template-columns:repeat(2,1fr)}}
+
 /* ---------- Paddle Board page ---------- */
 .pb-hero{position:relative;overflow:hidden}
 .pb-hero-bg{min-height:560px;background-size:cover;background-position:center;display:flex;align-items:center;position:relative}

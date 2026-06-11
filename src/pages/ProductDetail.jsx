@@ -217,6 +217,32 @@ export default function ProductDetail() {
         </section>
       )}
 
+      {/* OUTDOOR FURNITURE CATEGORIES — circular grid */}
+      {data.outdoorCats && data.outdoorCats.length > 0 && (
+        <section className="section" style={{ background: 'var(--bg)' }}>
+          <div className="wrap">
+            <RevealWrapper className="sec-head">
+              <span className="eyebrow">Outdoor Range</span>
+              <h2>Our Categories</h2>
+              <p style={{ color: 'var(--muted)', marginTop: '8px' }}>Lots of new products and product collections</p>
+            </RevealWrapper>
+            <RevealWrapper className="outdoor-cats-grid">
+              {data.outdoorCats.map((cat, i) => (
+                <div className="outdoor-cat-item" key={i}>
+                  <ZevImage
+                    id={cat.img}
+                    w={300}
+                    alt={cat.name}
+                    className="outdoor-cat-circle"
+                  />
+                  <span className="outdoor-cat-name">{cat.name}</span>
+                </div>
+              ))}
+            </RevealWrapper>
+          </div>
+        </section>
+      )}
+
       {/* SPECIFICATIONS IMAGE — full-width readable display */}
       {data.specImg && (
         <section className="section" style={{ background: 'var(--bg)' }}>

@@ -150,6 +150,16 @@ export const productPages = {
         brands: [],
       },
     ],
+    outdoorCats: [
+      { name: 'Sofas', img: '1555041469-a586c61ea9bc' },
+      { name: 'Dining Sets', img: '1519974559051-b92a1a3ff4e8' },
+      { name: 'Sun Loungers', img: '1530053426-8f18b2e47600' },
+      { name: 'Umbrella', img: '1516455207-9012d70f49b9' },
+      { name: 'Swings', img: '1505693416388-ac5ce068fe85' },
+      { name: 'Gazebos & Pergolas', img: '1523301551780-cd17359a95d6' },
+      { name: 'Tables', img: '1472396961693-142e6e269e0a' },
+      { name: 'Chairs', img: '1538688525198-9b88f6f53126' },
+    ],
     gallery: [
       'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=431,fit=crop/mp83Oby8KKTL0rqW/elegance-luxury-modern-home-interior-generated-by-ai-AoPZg8GMxxHJl1gq.jpg',
       'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=431,fit=crop/mp83Oby8KKTL0rqW/empty-modern-office-comfortable-armchair-leather-elegance-generated-by-ai-AE02QN4l93SVZvMq.jpg',
