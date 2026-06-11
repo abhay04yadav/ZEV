@@ -200,7 +200,7 @@ export default function ProductDetail() {
             {data.subcats.map((sub, i) => (
               <RevealWrapper key={i} className={`subcat-row${i % 2 === 1 ? ' reverse' : ''}`}>
                 <div className="subcat-img">
-                  <ZevImage id={sub.img} w={700} alt={sub.name} className="scimg" />
+                  <ZevImage id={sub.img} w={700} alt={sub.name} className={sub.contain ? 'scimg scimg-contain' : 'scimg'} />
                 </div>
                 <div className="subcat-text">
                   <h3>{sub.name}</h3>

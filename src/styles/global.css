@@ -562,6 +562,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .subcat-row.reverse{direction:rtl}
 .subcat-row.reverse>*{direction:ltr}
 .subcat-img .scimg{height:300px;border-radius:16px;box-shadow:var(--shadow-lg)}
+.subcat-img .scimg-contain img{object-fit:contain;background:#f8f9fa}
 .subcat-text h3{font-size:1.45rem;font-weight:700;color:var(--ink);margin:0 0 14px}
 .subcat-text p{color:var(--muted);line-height:1.72;margin:0 0 20px;font-size:.96rem}
 .brand-tags{display:flex;flex-wrap:wrap;gap:8px}
