@@ -543,6 +543,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .lb-arrow svg{width:16px;height:16px}
 }
 
+/* ---------- FAQ list ---------- */
+.faq-list{display:flex;flex-direction:column;gap:0;max-width:760px;margin:0 auto}
+.faq-item{padding:22px 0;border-bottom:1px solid var(--line)}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-item h4{font-size:1rem;font-weight:600;color:var(--ink);margin:0 0 8px}
+.faq-item p{font-size:.935rem;color:var(--muted);margin:0;line-height:1.65}
+
 /* ---------- Product detail page ---------- */
 .pd-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center}
 .pd-media{position:relative}

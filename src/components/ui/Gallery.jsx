@@ -43,9 +43,12 @@ export default function Gallery({ images, alts = [] }) {
   }, [idx]);
 
   const isOpen = idx !== null;
-  const src = isOpen
-    ? `https://images.unsplash.com/photo-${images[idx]}?auto=format&fit=crop&fm=webp&w=1400&q=82`
-    : '';
+  const buildSrc = (imgId) => {
+    if (!imgId) return '';
+    if (imgId.startsWith('http')) return imgId; // direct URL (client-hosted or CDN)
+    return `https://images.unsplash.com/photo-${imgId}?auto=format&fit=crop&fm=webp&w=1400&q=82`;
+  };
+  const src = isOpen ? buildSrc(images[idx]) : '';
   const alt = isOpen ? (alts[idx] || '') : '';
 
   return (

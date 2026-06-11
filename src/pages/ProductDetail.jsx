@@ -137,6 +137,26 @@ export default function ProductDetail() {
         </div>
       </section>
 
+      {/* FAQS — only shown when data.faqs exists (e.g. paddle-board) */}
+      {data.faqs && data.faqs.length > 0 && (
+        <section className="section" style={{ background: '#fff' }}>
+          <div className="wrap">
+            <RevealWrapper className="sec-head">
+              <span className="eyebrow">Questions</span>
+              <h2>Frequently Asked Questions</h2>
+            </RevealWrapper>
+            <RevealWrapper className="faq-list">
+              {data.faqs.map((faq, i) => (
+                <div className="faq-item" key={i}>
+                  <h4>{faq.q}</h4>
+                  <p>{faq.a}</p>
+                </div>
+              ))}
+            </RevealWrapper>
+          </div>
+        </section>
+      )}
+
       {/* RELATED */}
       <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="wrap">
