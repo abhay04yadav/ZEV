@@ -138,9 +138,15 @@ export const productPages = {
     subcatsTitle: 'Indoor & Outdoor Furniture',
     subcats: [
       {
+        name: 'Indoor Furniture',
+        desc: 'Elevate your interior spaces with ZEV\'s curated indoor furniture — from ergonomic office seating and executive desks to lounge and breakout settings. Designed for hotels, corporate offices and restaurants, blending comfort with lasting quality.',
+        img: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=431,fit=crop/mp83Oby8KKTL0rqW/elegance-luxury-modern-home-interior-generated-by-ai-AoPZg8GMxxHJl1gq.jpg',
+        brands: [],
+      },
+      {
         name: 'Outdoor Furniture',
         desc: 'Discover our premium outdoor furniture collection at ZEV — curated for hotels, restaurants, resorts and outdoor hospitality spaces. Our pieces combine style and durability, designed to complement any exterior setting while standing up to the UAE climate.',
-        img: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=800,fit=crop/mp83Oby8KKTL0rqW/screenshot-2024-10-04-130649-mP4nLwg15OfWx6oO.png',
+        img: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=431,fit=crop/mp83Oby8KKTL0rqW/dreamlike-surrealistic-landscape-purplish-tones-mxBl6P3kjxHPBaz1.jpg',
         brands: [],
       },
     ],
