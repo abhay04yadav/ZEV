@@ -105,8 +105,30 @@ export default function ProductDetail() {
         </div>
       </section>
 
+      {/* CATALOGUE DOWNLOAD — shown when data.catalog exists */}
+      {data.catalog && (
+        <section className="section" style={{ background: 'var(--bg)' }}>
+          <div className="wrap">
+            <RevealWrapper className="catalog-card">
+              <div className="catalog-thumb">
+                <img src={data.catalog.thumb} alt={data.catalog.label} />
+              </div>
+              <div className="catalog-info">
+                <span className="eyebrow">Product Catalogue</span>
+                <h3>{data.catalog.label}</h3>
+                <p>{data.catalog.note}</p>
+                <a href={data.catalog.url} target="_blank" rel="noopener" className="btn btn-primary">
+                  View Catalogue
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
+              </div>
+            </RevealWrapper>
+          </div>
+        </section>
+      )}
+
       {/* VALUE GRID */}
-      <section className="section" style={{ background: 'var(--bg)' }}>
+      <section className="section" style={{ background: data.catalog ? '#fff' : 'var(--bg)' }}>
         <div className="wrap">
           <RevealWrapper className="sec-head">
             <span className="eyebrow">Why ZEV</span>
@@ -129,8 +151,8 @@ export default function ProductDetail() {
         <section className="section" style={{ background: '#fff' }}>
           <div className="wrap">
             <RevealWrapper className="sec-head">
-              <span className="eyebrow">What We Supply</span>
-              <h2>Our Tech Services</h2>
+              <span className="eyebrow">{data.subcatsEyebrow || 'What We Supply'}</span>
+              <h2>{data.subcatsTitle || 'Our Services'}</h2>
             </RevealWrapper>
             {data.subcats.map((sub, i) => (
               <RevealWrapper key={i} className={`subcat-row${i % 2 === 1 ? ' reverse' : ''}`}>

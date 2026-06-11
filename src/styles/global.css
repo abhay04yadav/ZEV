@@ -543,6 +543,19 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .lb-arrow svg{width:16px;height:16px}
 }
 
+/* ---------- Catalogue download card ---------- */
+.catalog-card{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;background:#fff;border-radius:20px;padding:36px 40px;box-shadow:var(--shadow-md);border:1px solid var(--line)}
+.catalog-thumb{flex:none;width:220px}
+.catalog-thumb img{width:100%;border-radius:10px;box-shadow:var(--shadow-md);display:block}
+.catalog-info .eyebrow{margin-bottom:10px}
+.catalog-info h3{font-size:1.35rem;font-weight:700;color:var(--ink);margin:0 0 12px}
+.catalog-info p{color:var(--muted);margin:0 0 24px;line-height:1.7;font-size:.96rem}
+.catalog-info .btn svg{width:17px;height:17px}
+@media(max-width:640px){
+  .catalog-card{grid-template-columns:1fr;gap:22px;padding:24px}
+  .catalog-thumb{width:160px}
+}
+
 /* ---------- Sub-categories (camera-laptop style alternating rows) ---------- */
 .subcat-row{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:40px 0;border-bottom:1px solid var(--line)}
 .subcat-row:last-child{border-bottom:none}
@@ -565,6 +578,77 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .faq-item:first-child{border-top:1px solid var(--line)}
 .faq-item h4{font-size:1rem;font-weight:600;color:var(--ink);margin:0 0 8px}
 .faq-item p{font-size:.935rem;color:var(--muted);margin:0;line-height:1.65}
+
+/* ---------- Paddle Board page ---------- */
+.pb-hero{position:relative;overflow:hidden}
+.pb-hero-bg{min-height:560px;background-size:cover;background-position:center;display:flex;align-items:center;position:relative}
+.pb-hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,28,48,.82) 0%,rgba(6,28,48,.55) 100%)}
+.pb-hero-copy{position:relative;z-index:1;max-width:680px;padding:80px 0}
+.pb-hero-copy h1{color:#fff;font-size:clamp(2.2rem,5vw,3.4rem);margin:14px 0 18px}
+.pb-hero-copy .lead{color:rgba(255,255,255,.88);font-size:1.12rem;font-weight:500;margin:0 0 10px}
+.pb-hero-copy p{color:rgba(255,255,255,.72);margin:0 0 28px}
+
+/* Water adventure type cards */
+.pb-type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pb-type-card{border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow-md);border:1px solid var(--line);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.pb-type-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.pb-type-img{height:220px;overflow:hidden}
+.pb-type-img .ptimg{height:100%;border-radius:0}
+.pb-type-card h3{font-size:1.1rem;font-weight:700;color:var(--ink);margin:0;padding:18px 20px 6px}
+.pb-type-card p{font-size:.9rem;color:var(--muted);padding:0 20px 22px;margin:0}
+
+/* Feature section */
+.pb-feat{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.pb-feat-img{position:relative}
+.pb-feat-img .pfimg{border-radius:18px;height:380px;box-shadow:var(--shadow-lg)}
+.pb-feat-img .pfimg-sub{position:absolute;bottom:-24px;right:-24px;width:48%;height:180px;border-radius:14px;box-shadow:var(--shadow-lg);border:4px solid #fff}
+.pb-feat-text h2{font-size:clamp(1.6rem,3vw,2.1rem);margin:14px 0 16px}
+.pb-feat-text p{color:var(--muted);line-height:1.72;margin:0 0 20px}
+.pb-feat-list{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:10px}
+.pb-feat-list li{display:flex;align-items:center;gap:10px;font-size:.94rem;color:var(--ink)}
+.pb-feat-list li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--teal);flex:none}
+
+/* Stats */
+.pb-stats{display:flex;gap:40px;margin-top:8px}
+.pb-stat{display:flex;flex-direction:column}
+.pb-stat-num{font-size:2.4rem;font-weight:800;color:var(--teal);line-height:1;font-family:'DM Sans',sans-serif}
+.pb-stat-plus{font-size:1.6rem}
+.pb-stat-lbl{font-size:.85rem;font-weight:500;color:var(--muted);margin-top:4px;letter-spacing:.04em;text-transform:uppercase}
+
+/* Reviews */
+.pb-reviews{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.pb-review-card{background:#fff;border-radius:18px;padding:30px;box-shadow:var(--shadow-md);border:1px solid var(--line)}
+.pb-stars{display:flex;gap:3px;margin-bottom:16px}
+.pb-stars svg{width:18px;height:18px;color:#f59e0b}
+.pb-review-card p{color:var(--ink);font-size:.97rem;line-height:1.7;font-style:italic;margin:0 0 20px}
+.pb-reviewer{display:flex;align-items:center;gap:12px}
+.pb-reviewer img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none}
+.pb-reviewer strong{display:block;font-size:.93rem;font-weight:700;color:var(--ink)}
+.pb-reviewer span{font-size:.82rem;color:var(--muted)}
+
+/* Locations */
+.pb-loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.pb-loc-card{background:#fff;border-radius:18px;padding:32px;box-shadow:var(--shadow-md);border:1px solid var(--line)}
+.pb-loc-icon{width:48px;height:48px;border-radius:12px;background:var(--sand-soft);color:var(--teal);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.pb-loc-icon svg{width:22px;height:22px}
+.pb-loc-card h3{font-size:1.1rem;font-weight:700;color:var(--ink);margin:0 0 6px}
+.pb-loc-spots{font-size:.85rem;font-weight:600;color:var(--teal);margin:0 0 14px;letter-spacing:.02em}
+.pb-loc-card p{color:var(--muted);font-size:.92rem;line-height:1.7;margin:0}
+
+@media(max-width:860px){
+  .pb-type-grid{grid-template-columns:1fr}
+  .pb-feat{grid-template-columns:1fr;gap:32px}
+  .pb-feat-img .pfimg-sub{display:none}
+  .pb-feat-img .pfimg{height:260px}
+  .pb-reviews{grid-template-columns:1fr}
+  .pb-loc-grid{grid-template-columns:1fr}
+  .pb-hero-copy{padding:60px 0}
+}
+@media(max-width:600px){
+  .pb-type-grid{grid-template-columns:1fr}
+  .pb-stats{gap:24px}
+  .pb-stat-num{font-size:2rem}
+}
 
 /* ---------- Product detail page ---------- */
 .pd-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center}
