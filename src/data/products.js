@@ -488,13 +488,9 @@ export const productPages = {
         desc: 'Complete accessory kit included with every unit — EVA carrying case and all essentials for travel and outdoor use.',
         contain: true,
       },
-      {
-        img: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200/mp83Oby8KKTL0rqW/screenshot-2025-01-03-140759-YD0Baxo8kkUW0wjq.png',
-        name: 'Specifications',
-        desc: 'Full technical specifications for the portable espresso machine.',
-        contain: true,
-      },
     ],
+    specImg: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440/mp83Oby8KKTL0rqW/screenshot-2025-01-03-140759-YD0Baxo8kkUW0wjq.png',
+    specImgAlt: 'Technical specifications',
     gallery: [
       'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/screenshot-2025-01-03-134347-mv029NXX9NhaaMao.png',
       'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/mp83Oby8KKTL0rqW/screenshot-2025-01-03-130728-AR0MnwnbKntpeEQy.png',

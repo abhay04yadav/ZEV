@@ -217,6 +217,21 @@ export default function ProductDetail() {
         </section>
       )}
 
+      {/* SPECIFICATIONS IMAGE — full-width readable display */}
+      {data.specImg && (
+        <section className="section" style={{ background: 'var(--bg)' }}>
+          <div className="wrap">
+            <RevealWrapper className="sec-head">
+              <span className="eyebrow">Details</span>
+              <h2>Specifications</h2>
+            </RevealWrapper>
+            <RevealWrapper>
+              <img src={data.specImg} alt={data.specImgAlt || 'Specifications'} className="spec-img-full" />
+            </RevealWrapper>
+          </div>
+        </section>
+      )}
+
       {/* GALLERY */}
       <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="wrap">
