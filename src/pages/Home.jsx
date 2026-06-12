@@ -111,6 +111,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI BAND */}
+      <section className="ai-band">
+        <div className="wrap">
+          <RevealWrapper className="ai-band-copy">
+            <span className="eyebrow">New Division · ZEV AI</span>
+            <h2>Now bringing <span className="hl">artificial intelligence</span> to UAE organizations.</h2>
+            <p>Beyond trading and supply, ZEV now helps ministries, federal agencies and enterprises put AI to work — custom assistants, document intelligence and bilingual Arabic–English automation, built securely around your teams.</p>
+            <div className="ai-band-tags">
+              <span>Custom AI Assistants</span><span>Document Intelligence</span>
+              <span>Process Automation</span><span>Arabic ⇄ English</span>
+            </div>
+            <div className="ai-band-cta">
+              <Link to="/ai-solutions" className="btn btn-light">
+                Explore ZEV AI
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </Link>
+              <a href="https://api.whatsapp.com/send/?phone=971509191055&text=Hi%20ZEV%20AI%2C%20I%27d%20like%20to%20learn%20more." target="_blank" rel="noopener" className="btn btn-wa">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </RevealWrapper>
+          <RevealWrapper className="ai-band-visual">
+            <div className="ai-mini">
+              <div className="ai-mini-head">
+                <div className="av">Z</div>
+                <div className="who">
+                  <strong>ZEV AI Assistant</strong>
+                  <span>Online</span>
+                </div>
+              </div>
+              <div className="ai-mini-body">
+                <div className="b bot">Hello! How can ZEV AI help your team today?</div>
+                <div className="b user">Summarise this 40-page tender</div>
+                <div className="b bot">Done — here's a one-page summary, the key requirements and a checklist of what your proposal must address. Want a draft response next?</div>
+              </div>
+            </div>
+          </RevealWrapper>
+        </div>
+      </section>
+
       {/* PRODUCTS */}
       <section className="section products" id="products">
         <div className="wrap">
@@ -121,6 +162,55 @@ export default function Home() {
           </RevealWrapper>
           <RevealWrapper className="prod-grid">
             {products.map(p => <ProductCard key={p.id} {...p} />)}
+          </RevealWrapper>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="section" style={{ background: '#fff' }}>
+        <div className="wrap">
+          <RevealWrapper className="sec-head">
+            <span className="eyebrow">Beyond Supply</span>
+            <h2>Our Services</h2>
+            <p>More than products — ZEV is a full-service partner for AI, exhibitions, hospitality and print across the UAE.</p>
+          </RevealWrapper>
+          <RevealWrapper className="prod-grid">
+            <Link className="prod-card" to="/ai-solutions">
+              <ZevImage className="pimg" id="1496181133206-80ce9b88a853" w={700} alt="AI Solutions">AI Solutions</ZevImage>
+              <div className="pbody">
+                <div className="pcat">New Division</div>
+                <h3>AI Solutions</h3>
+                <p className="pdesc">Custom AI assistants, document intelligence and bilingual automation for your teams.</p>
+                <span className="plink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </Link>
+            <Link className="prod-card" to="/expo-stand">
+              <ZevImage className="pimg" id="1511578314322-379afb476865" w={700} alt="Expo Stand Design &amp; Build">Expo Stand Design</ZevImage>
+              <div className="pbody">
+                <div className="pcat">Exhibitions</div>
+                <h3>Expo Stand Design &amp; Build</h3>
+                <p className="pdesc">Turnkey exhibition stands — design, fabrication, graphics and on-site install.</p>
+                <span className="plink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </Link>
+            <Link className="prod-card" to="/catering">
+              <ZevImage className="pimg" id="1555244162-803834f70033" w={700} alt="Catering Services">Catering Services</ZevImage>
+              <div className="pbody">
+                <div className="pcat">Hospitality</div>
+                <h3>Catering Services</h3>
+                <p className="pdesc">Corporate and event catering with professional service, staffing and custom menus.</p>
+                <span className="plink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </Link>
+            <Link className="prod-card" to="/printing">
+              <ZevImage className="pimg" id="1503694978374-8a2fa686963a" w={700} alt="Printing &amp; Production">Printing &amp; Production</ZevImage>
+              <div className="pbody">
+                <div className="pcat">Print</div>
+                <h3>Printing &amp; Production</h3>
+                <p className="pdesc">Large-format signage, offset and digital print, branding and promotional items.</p>
+                <span className="plink">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </Link>
           </RevealWrapper>
         </div>
       </section>
